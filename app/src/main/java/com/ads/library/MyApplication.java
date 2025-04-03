@@ -13,7 +13,7 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
         MobileAds.initialize(this, initializationStatus -> {});
-        appOpenManager = new AppOpenManager(this, new AppOpenManager.AdListener() {
+        appOpenManager = new AppOpenManager("ca-app-pub-3940256099942544/9257395921",this, new AppOpenManager.AdListener() {
             @Override
             public void onAdDismissed() {
                 Log.d("AdStatus", "Ad dismissed");

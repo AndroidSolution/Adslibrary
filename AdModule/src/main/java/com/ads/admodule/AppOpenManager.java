@@ -28,6 +28,7 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
     private Activity currentActivity;
     private final Application application;
 
+    String ads_id;
     public interface AdListener {
         void onAdDismissed();
         void onAdFailedToLoad();
@@ -35,7 +36,8 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
 
     private final AdListener adListener;
 
-    public AppOpenManager(Application application, AdListener listener) {
+    public AppOpenManager(String AdsID,Application application, AdListener listener) {
+        ads_id = AdsID;
         this.application = application;
         this.adListener = listener;
         this.application.registerActivityLifecycleCallbacks(this);
@@ -107,7 +109,7 @@ public class AppOpenManager implements LifecycleObserver, Application.ActivityLi
         };
 
         AdRequest request = new AdRequest.Builder().build();
-        AppOpenAd.load(application, "ca-app-pub-3940256099942544/9257395921", request,
+        AppOpenAd.load(application, ads_id, request,
                 AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT, loadCallback);
     }
 

@@ -98,20 +98,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-        //Small native ads
-
-        NativeAds.getInstance().showSmallNative("ca-app-pub-3940256099942544/2247696110",MainActivity.this, findViewById(R.id.native_small));
-
-
-        //Big Native
-        NativeAds.getInstance().showNativeBig("ca-app-pub-3940256099942544/2247696110",MainActivity.this, findViewById(R.id.native_big));
-
-
-        //Medium Native
-        NativeAds.getInstance().showNativeMedium("ca-app-pub-3940256099942544/2247696110",MainActivity.this, findViewById(R.id.native_medium));
-
-
         //counter Interstitial Ads
         CounterInterstitial.getInstance().loadInterOne(getApplicationContext(),"ca-app-pub-3940256099942544/1033173712");
         Button btn_counter_inter = findViewById(R.id.counter_Interstitial);
@@ -131,6 +117,22 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
+
+        //Small native ads
+
+        NativeAds.getInstance().showSmallNative("ca-app-pub-3940256099942544/2247696110",MainActivity.this, findViewById(R.id.native_small));
+
+
+        //Big Native
+        NativeAds.getInstance().showNativeBig("ca-app-pub-3940256099942544/2247696110",MainActivity.this, findViewById(R.id.native_big));
+
+
+        //Medium Native
+        NativeAds.getInstance().showNativeMedium("ca-app-pub-3940256099942544/2247696110",MainActivity.this, findViewById(R.id.native_medium));
+
+
+
 
 
     }
