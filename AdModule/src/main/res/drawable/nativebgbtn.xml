@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <corners android:radius="5dp" />
+
+    <gradient
+        android:centerColor="@color/gallery_circle"
+        android:endColor="@color/gallery_circle"
+        android:startColor="@color/gallery_circle" />
+</shape>

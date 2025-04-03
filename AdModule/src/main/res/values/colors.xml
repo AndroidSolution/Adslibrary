@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="colorWhite">#ffffffff</color>
+    <color name="stockeCard">#5e58595a</color>
+    <color name="lightTransparent">#16000000</color>
+    <color name="gallery_circle">#007FFF</color>
+    <color name="duskYellow">#007FFF</color>
+    <color name="shimmer_placeholder">#E0E0E0</color>
+    <color name="lightGrey">#E0E0E0</color>
+</resources>
