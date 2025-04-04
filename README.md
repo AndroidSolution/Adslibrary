@@ -246,7 +246,7 @@ dependencies {
 
  ```
 
- # Small Native> 
+ # LanguageNativeHelper
   > step 1. Requst for ads in mainclass (previus act. also)
 
 ```gradle
