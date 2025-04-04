@@ -64,7 +64,7 @@
             <FrameLayout
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="160dp"
                 android:id="@+id/lnag_native_container"/>
         </LinearLayout>
     </ScrollView>
