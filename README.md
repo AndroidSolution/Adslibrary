@@ -239,7 +239,40 @@ dependencies {
             </LinearLayout>
 
 
+
+
           NativeAds.getInstance().showSmallNative("ca-app-pub-3940256099942544/2247696110",MainActivity.this, findViewById(R.id.native_small));
 
+
+ ```
+
+ # LanguageNativeHelper
+  > step 1. Requst for ads in mainclass (previus act. also)
+
+```gradle
+
+        new LanguageNativeHelper().shownativeadsbiggg("ca-app-pub-3940256099942544/2247696110",MyApplication.this);
+
+ ```
+ > step 2. load ads
+
+```gradle
+ new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    FrameLayout r11 = (FrameLayout) findViewById(R.id.lnag_native_container);
+                    if (LangNativeHealper.nativeloadd == true && LangNativeHealper.customm != null) {
+                        if (LangNativeHealper.customm.getParent() != null) {
+                            ((ViewGroup) LangNativeHealper.customm.getParent()).removeView(LangNativeHealper.customm);
+                        }
+                        r11.addView(LangNativeHealper.customm);
+                    }
+                }catch (Exception e){
+
+                }
+
+            }
+        },5000);
 
  ```
