@@ -1,8 +1,11 @@
 package com.ads.library;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -14,6 +17,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.ads.admodule.BannerManager;
 import com.ads.admodule.InterstitialAds;
+import com.ads.admodule.LanguageNative.LangNativeHealper;
+import com.ads.admodule.LanguageNative.LanguageNativeHelper;
 import com.ads.admodule.NativeAd.NativeAds;
 import com.ads.admodule.PreloadedInterstitial;
 import com.ads.admodule.CounterInterstitial;
@@ -132,6 +137,26 @@ public class MainActivity extends AppCompatActivity {
         NativeAds.getInstance().showNativeMedium("ca-app-pub-3940256099942544/2247696110",MainActivity.this, findViewById(R.id.native_medium));
 
 
+
+        //Language Native
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    FrameLayout r11 = (FrameLayout) findViewById(R.id.lnag_native_container);
+                    if (LangNativeHealper.nativeloadd == true && LangNativeHealper.customm != null) {
+                        if (LangNativeHealper.customm.getParent() != null) {
+                            ((ViewGroup) LangNativeHealper.customm.getParent()).removeView(LangNativeHealper.customm);
+                        }
+                        r11.addView(LangNativeHealper.customm);
+                    }
+                }catch (Exception e){
+
+                }
+
+            }
+        },5000);
 
 
 
